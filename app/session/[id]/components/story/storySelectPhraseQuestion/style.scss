@@ -1,0 +1,32 @@
+@import "/assets/typography.scss";
+.story-select-phrase-question {
+  margin-top: 24px;
+  .select-question-phrase-prompt {
+    margin-bottom: 24px;
+    direction: rtl;
+    @include Fa_Subtitle_1();
+  }
+
+  .wrap-question-phrase-choices {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    .single-choice {
+      height: 48px;
+      border-radius: 10px;
+      text-transform: unset !important;
+      &.persianTextStyle {
+        direction: rtl;
+        @include Fa_Body();
+      }
+
+      &.englishTextStyle {
+        direction: ltr;
+        @include En_Body();
+      }
+      &:not(:first-of-type) {
+        margin-top: 16px;
+      }
+    }
+  }
+}

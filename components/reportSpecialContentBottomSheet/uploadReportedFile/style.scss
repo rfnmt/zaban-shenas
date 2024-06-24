@@ -1,0 +1,24 @@
+.upload-reported-photo {
+  margin: 18px 8px 0 8px;
+  width: 34px;
+  height: 68px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .symble-icon {
+    width: 26.37px;
+    height: 26.37px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+#upload-report-photo {
+  display: none;
+}

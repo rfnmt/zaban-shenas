@@ -1,0 +1,25 @@
+.tip-bottomsheet {
+  z-index: 1200 !important;
+  max-width: 768px;
+  margin: 0 auto;
+
+  .react-modal-sheet-container {
+    box-shadow: unset !important;
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    margin: 0 auto;
+    left: unset !important;
+  }
+
+  .navigate-to-back {
+    position: unset !important;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+  }
+
+  .before-progress-space {
+    display: none !important;
+  }
+}

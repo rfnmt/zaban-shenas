@@ -1,0 +1,51 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.question-contents {
+  margin: auto;
+  position: relative;
+
+  &.slide-has-limitation {
+    .swiper-slide {
+      padding-bottom: 80px !important;
+    }
+  }
+
+  .question-prompt {
+    margin: 24px auto;
+  }
+
+  .questions-area {
+    min-height: calc(var(--vh, 1vh) - 155px);
+    position: relative;
+    padding-bottom: 5px;
+  }
+
+  .swiper {
+    width: 100%;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-pagination {
+      height: 8px;
+      .swiper-pagination-progressbar-fill {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+
+    .swiper-slide {
+      height: 0;
+      overflow: scroll;
+      text-align: center;
+      font-size: 18px;
+      overflow-x: hidden;
+    }
+
+    .swiper-slide-visible {
+      height: auto;
+    }
+  }
+}

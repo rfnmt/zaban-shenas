@@ -1,0 +1,92 @@
+@import "/assets/typography.scss";
+.learning-statistics {
+  margin-top: 24px;
+  > p {
+    direction: rtl;
+    margin-bottom: 16px;
+  }
+
+  .profile-daily-goal {
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    background: linear-gradient(108deg, #f5c066, #e2690d);
+    display: grid;
+    grid-template-columns: 120px auto;
+
+    .profile-animation-progressBar {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .roundy-wrapper {
+        .score {
+          display: flex;
+          align-items: baseline;
+          position: absolute;
+          top: 27px;
+          left: 25px;
+
+          p:first-of-type {
+            margin-right: 4px;
+            @include Fa_Tag_opposite();
+          }
+          p:last-of-type {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+        .without-any-score {
+          display: flex;
+          align-items: baseline;
+          position: absolute;
+          top: 35px;
+          left: 32px;
+          p {
+            @include Fa_Tag_opposite();
+            &:first-of-type {
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+      .roundy {
+        height: 50px;
+        overflow: hidden;
+        .sliderHandle {
+          display: none;
+        }
+      }
+      .profile-lottie-animation {
+      }
+
+      .animation-wrapper {
+        > div {
+          div:last-of-type {
+            div:last-of-type {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .daily-discription {
+      direction: rtl;
+      div {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: flex-end;
+
+        p {
+          margin-right: 8px;
+          @include Fa_Pageheader_opposite;
+        }
+      }
+      p {
+        @include Fa_Subtitle_2_Opposite;
+      }
+    }
+  }
+}

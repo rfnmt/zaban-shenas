@@ -1,0 +1,47 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.home-user-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  .gem-item,
+  .streak-item,
+  .thunder-item,
+  .toggle-popover {
+    display: flex;
+    gap: 5px;
+  }
+
+  .toggle-popover {
+    min-width: unset;
+    padding: 0;
+  }
+
+  .streak-item {
+    .active-streak {
+      display: flex;
+      gap: 5px;
+    }
+
+    .inactive-streak {
+      display: flex;
+      gap: 5px;
+      position: relative;
+
+      &.has-red-circle::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        display: block;
+        left: 16px;
+        border-radius: 100px;
+      }
+    }
+  }
+}

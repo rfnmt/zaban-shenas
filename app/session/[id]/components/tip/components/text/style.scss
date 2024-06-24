@@ -1,0 +1,41 @@
+@import "@/assets/mixin.scss";
+@import "@/assets/typography.scss";
+
+.tip-text-wrapper {
+  // background-color: red;
+  padding: 8px 16px;
+  position: relative;
+  direction: rtl;
+  text-align: right;
+  .image {
+    border-radius: 5px;
+  }
+
+  .title {
+    &.fa {
+      @include Fa_Pageheader();
+      text-align: right;
+      direction: rtl;
+    }
+
+    &.en {
+      @include En_Pageheader();
+      text-align: left;
+      direction: ltr;
+    }
+  }
+
+  .sub-title {
+    &.fa {
+      @include Fa_Body();
+      text-align: right;
+      direction: rtl;
+    }
+
+    &.en {
+      @include En_Body();
+      text-align: left;
+      direction: ltr;
+    }
+  }
+}

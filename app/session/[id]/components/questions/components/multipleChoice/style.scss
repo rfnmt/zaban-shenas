@@ -1,0 +1,21 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.multiple-choice-wrapper {
+  .choice-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 24px;
+
+    &.specialStyle {
+      justify-content: space-between !important;
+    }
+  }
+
+  &:last-of-type {
+    .dialogue-wrapper {
+      margin-bottom: 24px;
+    }
+  }
+}

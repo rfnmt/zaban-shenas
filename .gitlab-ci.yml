@@ -1,0 +1,105 @@
+image: docker:19.03.13
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+  CONTAINER_STAGING_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH-staging-$CI_COMMIT_BEFORE_SHA-$CI_PIPELINE_ID
+  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
+  CONTAINER_EXTRA_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH-extra_images-$CI_COMMIT_BEFORE_SHA-$CI_PIPELINE_ID
+  ANSIBLE_CONFIG: /deploy/ansible/ansible.cfg
+
+stages:
+  - dummy
+  - build_staging_image
+  - deploy_staging_image
+  - build_production_image
+  - deploy_production_image
+  - build_extra_images
+  - deploy_extra_images
+
+dummy:
+  stage: dummy
+  except:
+    - master
+    - develop
+  script:
+    - echo "This is just a dummy stage to enable merging to develop"
+
+build_staging_image:
+  stage: build_staging_image
+  only:
+    - develop
+  variables:
+    API_KEY: $STAGING_API_KEY
+    CRISP_URL: https://zabanshenas.com/chat/
+    CRISP_WEBSITE_ID: d9762d5d-dba9-4bc9-aeba-cc4f60b89f47
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg APP_URL=https://academy.staging.zabanshenas.com/ --build-arg API_URL=https://api-academy.staging.s1.zabanshenas.com/api/v1 -t $CONTAINER_STAGING_IMAGE .
+    - docker push $CONTAINER_STAGING_IMAGE
+deploy_staging_image:
+  stage: deploy_staging_image
+  image: ubuntu:latest
+  only:
+    - develop
+  before_script:
+    - apt update
+    - apt install curl jq -y
+  variables:
+    AUTH_TOKEN: $PORTAINER_VERIFICATION_TOKEN
+  script:
+    - chmod +x /builds/academy/pwa/smart-deploy.sh
+    - bash /builds/academy/pwa/smart-deploy.sh --image_group staging --stack_name "$CI_PROJECT_PATH staging" --env staging --new_image_address $CONTAINER_STAGING_IMAGE --template_path /builds/academy/pwa/docker-compose-portainer-smart-template.yml
+
+build_production_image:
+  stage: build_production_image
+  only:
+    - master
+  variables:
+    API_KEY: $PRODUCTION_API_KEY
+    CRISP_URL: https://zabanshenas.com/chat/
+    CRISP_WEBSITE_ID: 23a694e5-1302-4378-9ac6-604f7f86d519
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg APP_URL=https://academy.zabanshenas.com/ --build-arg API_URL=https://api-academy.s1.zabanshenas.com/api/v1 -t $CONTAINER_RELEASE_IMAGE .
+    - docker push $CONTAINER_RELEASE_IMAGE
+
+deploy_production_image:
+  stage: deploy_production_image
+  image: $DEPLOYMENT_IMAGE
+  only:
+    - master
+  variables:
+    PRODUCTION_PASSPHRASE: $PRODUCTION_PASSPHRASE
+  script:
+    - cd /deploy/
+    - ./portainer-deploy.sh --stack 633be0d3-1cf1-42ab-8806-f6a4e574ba8a
+
+build_extra_images:
+  stage: build_extra_images
+  except:
+    - master
+    - develop
+  variables:
+    API_KEY: $STAGING_API_KEY
+    CRISP_URL: https://zabanshenas.com/chat/
+    CRISP_WEBSITE_ID: d9762d5d-dba9-4bc9-aeba-cc4f60b89f47
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg APP_URL=https://academy.staging.zabanshenas.com/ --build-arg API_URL=https://api-academy.staging.s1.zabanshenas.com/api/v1 -t $CONTAINER_EXTRA_IMAGE .
+    - docker push $CONTAINER_EXTRA_IMAGE
+deploy_extra_images:
+  stage: deploy_extra_images
+  image: ubuntu:latest
+  except:
+    - master
+    - develop
+  before_script:
+    - apt update
+    - apt install curl jq -y
+  variables:
+    AUTH_TOKEN: $PORTAINER_VERIFICATION_TOKEN
+  script:
+    - chmod +x /builds/academy/pwa/smart-deploy.sh
+    - bash /builds/academy/pwa/smart-deploy.sh --image_group extra_images --stack_name "$CI_PROJECT_PATH preview stack" --env staging --new_image_address $CONTAINER_EXTRA_IMAGE --template_path /builds/academy/pwa/docker-compose-portainer-smart-template.yml

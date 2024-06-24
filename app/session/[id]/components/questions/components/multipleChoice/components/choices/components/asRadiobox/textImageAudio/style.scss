@@ -1,0 +1,25 @@
+@import "/assets/typography.scss";
+.text-image-audio-choice-wrapper {
+  margin-bottom: 16px;
+  height: fit-content;
+  flex: 0 0 calc(50% - 12px);
+  box-shadow: 0 1px 1px #00000029;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:nth-child(2n-1) {
+    margin-right: 16px;
+  }
+
+  .image-container {
+    position: relative;
+    height: 122px;
+  }
+  p {
+    padding: 8px 0;
+    text-align: center;
+    @include Fa_Body();
+  }
+}

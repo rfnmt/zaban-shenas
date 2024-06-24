@@ -1,0 +1,32 @@
+.audio-transcript {
+  padding: 8px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 46px auto;
+  gap: 8px;
+  align-items: center;
+
+  .audio-player {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    button {
+      padding: unset;
+      width: 45px;
+      height: 45px;
+      min-width: unset !important;
+      border-radius: 100%;
+    }
+  }
+
+  .unvisible-slice {
+    &::after {
+      content: "\00a0";
+    }
+  }
+}

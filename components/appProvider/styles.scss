@@ -1,0 +1,7 @@
+@import "@/assets/mixin.scss";
+@import "@/assets/typography.scss";
+
+.academy-root-layout {
+  // min-height: 100vh;
+  min-height: calc(var(--vh, 1vh));
+}

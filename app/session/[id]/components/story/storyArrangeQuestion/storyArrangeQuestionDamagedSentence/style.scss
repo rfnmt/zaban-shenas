@@ -1,0 +1,20 @@
+.question-arrange-wrapp-text {
+  width: 100%;
+
+  .question-arrange-slice {
+    white-space: pre-wrap;
+  }
+
+  .question-arrange-sentence {
+    .sentence {
+      .wrap-sentence {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+          margin: 0 1.5px 5px 1.5px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

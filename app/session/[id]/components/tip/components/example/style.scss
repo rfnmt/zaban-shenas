@@ -1,0 +1,73 @@
+@import "/assets/typography.scss";
+@import "/assets/mixin.scss";
+
+.wrapper-tip-example {
+  .content-without-image {
+    // grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
+    .test-class {
+      width: 100%;
+    }
+  }
+  .content-with-image {
+    // grid-template-columns: 1fr 16fr 1fr;
+    grid-template-columns: 16fr 1fr;
+    .test-class {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      width: 100%;
+      .wrap-sentence {
+        width: fit-content;
+        min-height: 35px;
+      }
+    }
+  }
+
+  .content {
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    .image {
+      position: relative;
+      display: flex;
+
+      img {
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .audio {
+      margin-bottom: auto;
+
+      button {
+        min-width: unset !important;
+      }
+
+      .lottie-animation {
+        width: 48px;
+        height: 28px;
+        display: flex;
+        align-items: flex-start;
+        padding: unset;
+      }
+    }
+
+    .wrapper-sentences {
+      height: 100%;
+
+      > div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+}

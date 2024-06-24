@@ -1,0 +1,69 @@
+@import "/assets/typography.scss";
+
+.user-money-wallet {
+  height: 48px;
+  margin-top: 16px;
+  .money-wallet-credit {
+    height: inherit;
+    width: 100%;
+    justify-content: space-between;
+    padding: unset;
+
+    &:hover {
+      background-color: unset;
+    }
+    .title {
+      text-align: right;
+      .price-title {
+        margin-bottom: 4px;
+        @include Fa_Subtitle_2();
+      }
+
+      .price-title-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        .amount {
+          margin-left: 4px;
+          @include Fa_Subtitle_2();
+        }
+        .diamond-icon {
+          width: 24px !important;
+          height: 24px !important;
+          margin-left: 8px;
+          position: unset !important;
+        }
+
+        .back-icon {
+          width: 12px;
+          height: 7px;
+          margin-left: 6px;
+          clip-path: polygon(
+            40% 0%,
+            41% 44%,
+            100% 44%,
+            100% 57%,
+            40% 56%,
+            40% 100%,
+            0 51%
+          );
+        }
+
+        .gem-value-wrapper {
+          display: flex;
+          span {
+            margin: 0 4px;
+            @include Fa_Subtitle_2();
+            &:first-of-type {
+              order: 1;
+            }
+            &:last-of-type {
+              order: 2;
+              margin: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}

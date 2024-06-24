@@ -1,0 +1,54 @@
+@import "/assets/typography.scss";
+.settings-child {
+  border-radius: unset !important;
+  width: 100%;
+  padding: 16px 16px 16px 8px !important;
+  direction: rtl;
+
+  &:hover {
+    background-color: unset;
+  }
+
+  &:first-child {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+  }
+  &:last-child {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid;
+  }
+
+  .setting-colored-icons {
+    height: 100%;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    .icon {
+      font-size: 36px;
+    }
+  }
+  .setting-title {
+    position: relative;
+    flex-grow: 1;
+    @include Fa_Body();
+
+    display: flex;
+  }
+
+  .navigate-wrapper {
+    display: flex;
+    .navigate-icon {
+      width: 24px;
+    }
+    .custom_icon {
+      width: 24px;
+      margin-left: 8px;
+    }
+  }
+}

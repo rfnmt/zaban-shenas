@@ -1,0 +1,28 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.wrap-loading {
+  height: 100dvh;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  > * {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    text-align: right;
+    direction: rtl;
+    @include Fa_Subtitle_1();
+  }
+
+  .title-before-lottie,
+  .subtitle {
+    text-align: right;
+    direction: rtl;
+    @include Fa_Placeholder();
+  }
+}

@@ -1,0 +1,87 @@
+@mixin z-grid-columns(
+  $gap: false,
+  $columns: false,
+  $justify: false,
+  $align: false,
+  $grid-auto-flow: false
+) {
+  display: grid;
+  display: -ms-grid;
+  @if ($align) {
+    align-items: $align;
+  }
+
+  @if ($justify) {
+    justify-content: $justify;
+  }
+
+  grid-template-columns: $columns;
+  @if $gap > 0 {
+    grid-column-gap: $gap;
+  }
+
+  @if ($grid-auto-flow) {
+    grid-auto-flow: $grid-auto-flow;
+  }
+
+  -ms-z-grid-columns: z-box-gap($columns, $gap);
+}
+
+@mixin z-grid-rows($gap: false, $rows: false, $justify: false, $align: false) {
+  display: grid;
+  display: -ms-grid;
+  @if ($align) {
+    align-items: $align;
+  }
+
+  grid-template-rows: $rows;
+  @if $gap > 0 {
+    grid-row-gap: $gap;
+  }
+
+  @if ($justify) {
+    justify-content: $justify;
+  }
+
+  @if ($align) {
+    align-items: $align;
+  }
+
+  -ms-z-grid-rows: z-box-gap($rows, $gap);
+}
+
+@mixin main-common-wrapper($header: 65px, $footer: false, $gap: false) {
+  display: grid;
+  display: -ms-grid;
+  grid-template-rows: $header calc(100vh - $header);
+
+  > :nth-child(2) {
+    overflow-y: scroll;
+  }
+
+  @if ($footer) {
+    grid-template-rows: $header calc(100vh - $header - $footer) $footer;
+  }
+
+  @if ($gap) {
+    grid-row-gap: $gap;
+  }
+}
+
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  $padding: if(
+    $height,
+    percentage($height/$ratio-or-width),
+    percentage(1 / $ratio-or-width)
+  );
+  &:before {
+    content: "";
+    float: left;
+    padding-bottom: $padding;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

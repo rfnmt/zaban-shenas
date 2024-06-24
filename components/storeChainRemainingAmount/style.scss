@@ -1,0 +1,32 @@
+@import "/assets/typography.scss";
+
+.store-chain-wrapper {
+  .saviour-wrapper {
+    justify-content: space-between;
+    display: grid;
+
+    column-gap: 4px;
+    margin-bottom: 16px;
+    .saviour {
+      background-color: #ffffff80;
+      height: 8px;
+      &:last-of-type {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &:first-of-type {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      &.success {
+        background-color: #20b33b;
+      }
+    }
+  }
+  .saviour-info {
+    margin-bottom: 16px;
+    @include Fa_Tag_opposite();
+  }
+}

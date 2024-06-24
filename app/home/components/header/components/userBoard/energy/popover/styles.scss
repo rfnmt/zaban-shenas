@@ -1,0 +1,121 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.home-energy-popover {
+  .MuiBackdrop-root {
+    top: 56px;
+    margin: 0 auto;
+  }
+
+  .MuiPaper-root {
+    border-radius: unset !important;
+    width: 100%;
+    left: 0 !important;
+    right: 0;
+    margin: auto;
+    max-width: 768px;
+    top: 56px !important;
+    padding: 16px;
+    overflow: visible;
+    box-shadow: unset !important;
+
+    @media (min-width: 768px) {
+      border-radius: 0 0 10px 10px !important;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      left: 130px;
+      margin: auto;
+      max-width: 768px;
+      top: -5.7px;
+      border-top-left-radius: 5px;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      z-index: 9;
+      transform: rotate(45deg);
+    }
+
+    .thunders {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      .energy-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.disable {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .fa-body {
+      margin-top: 16px;
+      direction: rtl;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+
+      p {
+        @include Fa_Body();
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    p.fa-tag {
+      @include Fa_Tag();
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .purchase-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 16px;
+      border-radius: 10px;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      p {
+        display: flex;
+        gap: 4px;
+      }
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+
+      .description {
+        display: flex;
+        gap: 8px;
+        @include Fa_Subtitle_2();
+
+        &.fill-energy {
+          position: relative;
+          svg {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+
+            &:first-child {
+              left: 7px;
+            }
+          }
+
+          p {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

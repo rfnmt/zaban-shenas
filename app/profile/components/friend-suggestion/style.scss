@@ -1,0 +1,51 @@
+@import "/assets/typography.scss";
+.students-items {
+  margin-top: 8px;
+
+  .student-item {
+    display: grid !important;
+    grid-template-columns: 1fr 112px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid;
+    }
+
+    .student-img-name-wrapper {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      cursor: pointer;
+      img {
+        border-radius: 50%;
+      }
+      .name-reason-wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding-right: 16px;
+        justify-content: space-around;
+        height: 100%;
+        p:first-of-type {
+          @include Fa_Body;
+        }
+        p:last-of-type {
+          @include Fa_Tag;
+        }
+      }
+    }
+    .follow-unfollow-delete-wrapper {
+      display: grid;
+      &.showDeleteButton {
+        grid-template-columns: 48px 64px;
+      }
+      &.hideDeleteButton {
+        grid-template-columns: 48px;
+      }
+    }
+
+    button {
+      padding: unset !important;
+      margin-right: auto;
+      border-radius: unset !important;
+    }
+  }
+}

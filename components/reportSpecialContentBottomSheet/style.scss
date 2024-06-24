@@ -1,0 +1,25 @@
+@import "/assets/typography.scss";
+
+// Style For react-spring-bottom-sheet
+
+.report-special-content-bottomsheet {
+  z-index: 1260 !important;
+  max-width: 768px;
+  margin: 0 auto;
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    left: unset !important;
+  }
+
+  .comment-body-wrapper {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 100%;
+
+    .uploadedImagesWrapper {
+      display: flex;
+    }
+  }
+}

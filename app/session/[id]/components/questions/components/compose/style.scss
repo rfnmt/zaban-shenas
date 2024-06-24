@@ -1,0 +1,57 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.compose-wrapper {
+  // background: green;
+
+  > * {
+    margin-top: 24px !important;
+  }
+
+  // > *:last-child {
+  //   margin-bottom: 60px !important;
+  // }
+
+  .choice-wrapper {
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    row-gap: 8px;
+    padding: 8px 0;
+
+    .choice-item {
+      cursor: pointer;
+      margin-left: 5px;
+      box-shadow: 0 1px 1px #00000029;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      min-height: 22px;
+      padding: 16px 12px;
+      box-sizing: content-box;
+
+      > div {
+        width: auto !important;
+      }
+
+      p.en {
+        @include En_Body();
+      }
+
+      p.fa {
+        @include Fa_Body();
+      }
+    }
+  }
+
+  // &:last-of-type {
+  //   .dialogue-wrapper {
+  //     margin-bottom: 24px;
+  //   }
+  // }
+}

@@ -1,0 +1,46 @@
+@import "/assets/typography.scss";
+.followersFollowingLayout {
+  &.container {
+    padding: unset !important;
+  }
+  .tabs-search-wrapper {
+    &.container {
+      padding: unset !important;
+      margin-top: 1px;
+    }
+    position: fixed;
+    z-index: 99;
+    button {
+      @include Fa_Subtitle_2();
+    }
+    .input-search-wrapper {
+      padding: 16px;
+
+      .form {
+        position: relative;
+        .clean-input-text {
+          position: absolute;
+          top: 0.5px;
+          left: 0px;
+        }
+      }
+    }
+  }
+  .page-animation {
+    padding-top: 123px;
+  }
+  .students-items {
+    .student-item {
+      direction: rtl;
+      grid-template-columns: 1fr 50px;
+    }
+  }
+
+  .follow-loading {
+    // height: calc(100vh - 123px);
+    height: calc(100vh - 185px);
+    max-width: 768px;
+    margin: 0 auto;
+    top: unset !important;
+  }
+}

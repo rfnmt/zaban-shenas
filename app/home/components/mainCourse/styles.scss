@@ -1,0 +1,27 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.return-to-select-grade-main-course {
+  cursor: pointer;
+  height: 56px;
+  padding: 4px 8px;
+  justify-content: flex-start !important;
+  align-items: center;
+  width: 100%;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+
+  .list-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    @include Fa_Body();
+  }
+}

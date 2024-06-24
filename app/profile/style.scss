@@ -1,0 +1,14 @@
+@import "/assets/typography.scss";
+// .main-profileLayout-wrapper {
+.user-profile-info {
+  padding-top: 16px;
+  overflow: hidden;
+
+  .add-new-friends {
+    p {
+      margin-right: 4px;
+      @include Fa_body_opposite();
+    }
+  }
+}
+// }

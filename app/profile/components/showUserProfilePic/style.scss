@@ -1,0 +1,40 @@
+.user-fullScreen-pic {
+  .MuiPaper-root {
+    margin: 0;
+    height: 100%;
+    justify-content: center;
+    max-height: 100%;
+    width: 374px;
+    .options {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      // flex-direction: row-reverse;
+      .edit-button {
+        font-size: 16px;
+      }
+      .cancel {
+        padding: unset;
+        width: 48px;
+        height: 48px;
+        min-width: unset;
+        .icon-plus {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+    .fullScreenPic {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

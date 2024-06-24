@@ -1,0 +1,68 @@
+image: docker:19.03.13
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+  CONTAINER_STAGING_IMAGE: $CI_REGISTRY_IMAGE:staging
+  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
+  ANSIBLE_CONFIG: /deploy/ansible/ansible.cfg
+
+stages:
+  - dummy
+  - build_staging_image
+  - deploy_staging_image
+  - build_production_image
+  - deploy_production_image
+
+dummy:
+  stage: dummy
+  except:
+    - master
+    - develop
+  script:
+    - echo "This is just a dummy stage to enable merging to develop"
+
+build_staging_image:
+  stage: build_staging_image
+  only:
+    - develop
+  variables:
+    API_KEY: $STAGING_API_KEY
+    CRISP_URL: https://zabanshenas.com/chat/
+    CRISP_WEBSITE_ID: d9762d5d-dba9-4bc9-aeba-cc4f60b89f47
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg APP_URL=https://academy.staging.zabanshenas.com/ --build-arg API_URL=https://api-academy.staging.s1.zabanshenas.com/api/v1 -t $CONTAINER_STAGING_IMAGE .
+    - docker push $CONTAINER_STAGING_IMAGE
+deploy_staging_image:
+  stage: deploy_staging_image
+  image: $DEPLOYMENT_IMAGE
+  only:
+    - develop
+  script:
+    - cd /deploy/ansible
+    - ansible-playbook -i ./hosts ./deploy.yml -e target=pwa_academy_staging -e IMAGE=$CONTAINER_STAGING_IMAGE
+
+build_production_image:
+  stage: build_production_image
+  only:
+    - master
+  variables:
+    API_KEY: $PRODUCTION_API_KEY
+    CRISP_URL: https://zabanshenas.com/chat/
+    CRISP_WEBSITE_ID: 23a694e5-1302-4378-9ac6-604f7f86d519
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg APP_URL=https://academy.zabanshenas.com/ --build-arg API_URL=https://api-academy.s1.zabanshenas.com/api/v1 -t $CONTAINER_RELEASE_IMAGE .
+    - docker push $CONTAINER_RELEASE_IMAGE
+
+deploy_production_image:
+  stage: deploy_production_image
+  image: $DEPLOYMENT_IMAGE
+  only:
+    - master
+  variables:
+    PRODUCTION_PASSPHRASE: $PRODUCTION_PASSPHRASE
+  script:
+    - cd /deploy/ansible
+    - ansible-playbook -i ./hosts ./deploy.yml -e target=pwa_academy_production -e IMAGE=$CONTAINER_RELEASE_IMAGE

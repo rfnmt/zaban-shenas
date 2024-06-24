@@ -1,0 +1,44 @@
+@import "/assets/typography.scss";
+.input-search-wrapper {
+  width: 100%;
+  .form {
+    box-shadow: unset;
+    padding: 5px;
+    display: grid;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    grid-template-columns: auto 30px;
+
+    .magnifier {
+      // width: 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon-zoom {
+        font-size: 24px;
+      }
+    }
+
+    .input-tag {
+      // width: 92%;
+      input {
+        padding: unset;
+        height: 100%;
+        caret-color: #afafaf;
+        font-size: 20px;
+        padding-right: 8px;
+        direction: rtl;
+        &::placeholder {
+          @include Fa_Placeholder();
+        }
+      }
+    }
+
+    .clean-input-text {
+      position: absolute;
+      top: 15.5px;
+      left: 17px;
+    }
+  }
+}

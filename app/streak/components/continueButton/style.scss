@@ -1,0 +1,20 @@
+@import "/assets/typography.scss";
+.streak-button-wrapper {
+  width: 100%;
+  margin-top: auto;
+  .what-is-chain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 0 24px auto;
+    align-items: center;
+
+    .Z3DButton {
+      margin-bottom: 24px;
+    }
+
+    .continue {
+      width: 90px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "/assets/typography.scss";
+.level-two-message-captions {
+  display: flex;
+  .caption {
+    text-align: right;
+    @include Fa_Subtitle_2;
+  }
+}

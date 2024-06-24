@@ -1,0 +1,175 @@
+// start Fa typographies
+
+@mixin Fa_Header {
+  font-size: 26px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Page_Header {
+  font-size: 17px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Pageheader_opposite {
+  font-size: 17px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Subtitle_1 {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Subtitle_1_opposite {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Subtitle_2 {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Subtitle_2_Opposite {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Body {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_body_opposite {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Tag {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Tag_opposite {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_H_1 {
+  font-size: 23px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_H_2 {
+  font-size: 21px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_H_3 {
+  font-size: 19px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_H_4 {
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Paragraph {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  font-family: IRANSans !important;
+}
+
+@mixin Fa_Pageheader {
+  font-size: 17px !important;
+  font-weight: bold !important;
+  font-family: IRANSans !important;
+}
+
+// end Fa typographies
+
+// start EN typographies
+
+@mixin En_Pageheader {
+  font-size: 17px !important;
+  font-weight: bold !important;
+  font-family: Comme !important;
+}
+
+@mixin En_Subtitle {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  font-family: Comme !important;
+}
+
+@mixin En_Body {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_PageHeader {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_Tag {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_H_1 {
+  font-size: 23px !important;
+  font-weight: bold !important;
+  font-family: Comme !important;
+}
+
+@mixin En_H_2 {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_H_3 {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_H_4 {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+@mixin En_Paragraph {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: Comme !important;
+}
+
+// end EN typographies

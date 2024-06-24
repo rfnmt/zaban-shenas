@@ -1,0 +1,13 @@
+@import "/assets/typography.scss";
+
+.setting-childs-header {
+  // margin: auto;
+  // max-width: 768px;
+
+  p {
+    line-height: 1.334;
+    margin: unset;
+    padding: 16px 0;
+    @include Fa_Tag();
+  }
+}

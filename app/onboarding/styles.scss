@@ -1,0 +1,36 @@
+.onboarding-wrapper {
+  height: 100dvh;
+
+  .onboarding-layout-animation {
+    height: inherit;
+  }
+  .onboarding-nextPage {
+    margin-bottom: 16px;
+    margin-top: auto;
+    .threeDots-animation {
+      svg {
+        width: 40px !important;
+        height: 30px !important;
+      }
+    }
+  }
+
+  .onBoarding-swiper-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .onboargin-items {
+      margin-left: unset !important;
+      margin-right: unset !important;
+      overflow-y: scroll;
+    }
+  }
+
+  .onboarding-question-part,
+  .onboarding-placement-wrapper,
+  .onboarding-customPage-part {
+    &.container {
+      width: unset !important;
+    }
+  }
+}

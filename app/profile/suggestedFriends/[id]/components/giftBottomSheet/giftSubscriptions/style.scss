@@ -1,0 +1,24 @@
+@import "/assets/typography.scss";
+.gift-bottomsheet-subscriptions {
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+  direction: rtl;
+
+  .subscription-header {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+
+    .title {
+      @include Fa_Subtitle_1_opposite();
+    }
+
+    .description {
+      @include Fa_Subtitle_2_Opposite();
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.only-audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .audio-player {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .controll {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .MuiButton-startIcon {
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .MuiButton-endIcon {
+        margin-right: 0;
+        margin-left: 0;
+        .determinate {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100% !important;
+          height: 100% !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .slow-audio-player {
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .controll {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .MuiButton-startIcon {
+        margin-right: 0;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .MuiButton-endIcon {
+        margin-right: 0;
+        margin-left: 0;
+        .determinate {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100% !important;
+          height: 100% !important;
+          color: #fff;
+
+          .MuiCircularProgress-svg {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

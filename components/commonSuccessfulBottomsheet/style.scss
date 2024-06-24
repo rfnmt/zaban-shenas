@@ -1,0 +1,69 @@
+@import "/assets/typography.scss";
+.common-successful-bottom-sheet {
+  direction: ltr;
+  max-width: 768px;
+  margin: 0 auto;
+  z-index: 10001 !important;
+  .react-modal-sheet-container {
+    box-shadow: unset !important;
+    border-top-right-radius: 12px !important;
+    border-top-left-radius: 12px !important;
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px !important;
+    left: unset !important;
+  }
+
+  .successful-bottomSheet-body {
+    padding: 16px 16px 24px 16px;
+    overflow-y: scroll;
+
+    .success-message {
+      text-align: center;
+      .success-title {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+
+      .success-icon {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+    }
+
+    .success-info {
+      padding: 20px 16px;
+      display: flex;
+      justify-content: space-between;
+      background-image: linear-gradient(109deg, #800080, #191970);
+      border-radius: 10px;
+      .subscription-icon {
+        width: 64px;
+        height: 64px;
+        position: relative;
+      }
+
+      .subscription-title-and-subtitle-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        p {
+          &:first-of-type {
+            @include Fa_Pageheader_opposite();
+          }
+        }
+
+        p {
+          &:last-of-type {
+            direction: rtl;
+            @include Fa_Tag_opposite();
+          }
+        }
+      }
+    }
+  }
+}

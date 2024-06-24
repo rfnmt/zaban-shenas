@@ -1,0 +1,73 @@
+@import "../../assets/mixin.scss";
+@import "../../assets/typography.scss";
+
+.splash-screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  height: calc(100dvh - env(safe-area-inset-bottom));
+
+  align-items: center;
+  justify-content: space-evenly;
+
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+
+  grid-template-rows: 1fr 50px 50px 50px;
+
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgb(0, 118, 255) 20%,
+    rgb(13, 0, 168) 90%
+  );
+
+  .welcome-animation {
+    height: 288px;
+    width: 288px;
+    overflow: hidden;
+
+    > div {
+      height: 288px;
+      width: 288px;
+    }
+  }
+
+  .typography {
+    margin: 0 auto;
+    max-width: 375px;
+    margin-top: 72px;
+    text-align: center;
+
+    .title {
+      font-family: Comme;
+      font-weight: bold;
+      color: #fff;
+      font-size: 43px;
+      margin-bottom: 16px;
+    }
+
+    .sub-title {
+      color: #fff;
+      margin-bottom: 24px;
+      font-family: IRANSans;
+      @include Fa_Subtitle_2_Opposite();
+    }
+
+    .splash-progress {
+      width: 100%;
+      height: 8px;
+      border-radius: 15px;
+      background: #ffffff80;
+
+      .MuiLinearProgress-bar {
+        background: #fff;
+      }
+    }
+  }
+}

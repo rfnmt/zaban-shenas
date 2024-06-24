@@ -1,0 +1,23 @@
+.tips-wrapper {
+  overflow-y: scroll;
+  padding-bottom: 5px;
+
+  main {
+    max-width: 768px;
+    margin: auto;
+    width: 100%;
+  }
+
+  #tip-contents {
+    text-align: center;
+    .tip-items {
+      height: 100%;
+      overflow: auto;
+      &:last-child {
+        > div:last-of-type {
+          padding-bottom: 80px !important;
+        }
+      }
+    }
+  }
+}

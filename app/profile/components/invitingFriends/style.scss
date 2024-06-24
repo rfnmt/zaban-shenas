@@ -1,0 +1,23 @@
+@import "/assets/typography.scss";
+
+.invite-friends {
+  padding: 16px;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, #9d1cb1, #7834de);
+  margin-bottom: 40px;
+  .caption {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    direction: rtl;
+    margin-bottom: 24px;
+    div:first-of-type {
+      p:first-of-type {
+        margin-bottom: 8px;
+        @include Fa_Subtitle_1();
+      }
+      p:last-of-type {
+        @include Fa_Placeholder();
+      }
+    }
+  }
+}

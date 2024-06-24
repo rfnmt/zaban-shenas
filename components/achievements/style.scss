@@ -1,0 +1,57 @@
+@import "/assets/typography.scss";
+.achievements-warpper {
+  border-radius: 10px;
+  margin-bottom: 24px;
+  .show-achievements {
+    direction: rtl;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    column-gap: 10px;
+    margin-bottom: 16px;
+    position: relative;
+    .level-data {
+      position: absolute;
+      bottom: 0px;
+      width: 64px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      @include Fa_Tag();
+    }
+    img {
+      border-radius: 8px;
+    }
+    .title {
+      @include Fa_Body;
+    }
+    .description {
+      @include Fa_Tag;
+    }
+
+    .progress-and-level-counter {
+      display: grid;
+      grid-template-columns: 1fr 40px;
+      align-items: center;
+      column-gap: 10px;
+      .level-counter {
+        align-self: flex-end;
+        text-align: right;
+        @include Fa_Tag;
+      }
+    }
+
+    .getting-the-gems {
+      height: 38px !important;
+    }
+  }
+  .see-all-achievements {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    width: 100%;
+    p {
+      @include Fa_Body;
+    }
+  }
+}

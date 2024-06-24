@@ -1,0 +1,30 @@
+@import "/assets/typography.scss";
+.select_delete_cancel_buttons {
+  .MuiPaper-root {
+    width: 327px;
+    margin: 0 24px;
+    border-radius: 10px;
+  }
+  .select_delete_options {
+    padding: 16px;
+    direction: rtl;
+    .title {
+      @include Fa_Subtitle_1();
+    }
+    .select_delete {
+      display: flex;
+      flex-direction: column;
+      button {
+        justify-content: flex-start;
+        padding: 16px 0;
+        font-size: 15px;
+        line-height: 1.067;
+        margin-bottom: 8px;
+
+        &:last-of-type {
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+}

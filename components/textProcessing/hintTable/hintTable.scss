@@ -1,0 +1,21 @@
+.table-popover {
+  z-index: 2000;
+
+  .table-popover-body-row:first-of-type {
+    .table-popover-body-cells:first-of-type {
+      border-top: unset !important;
+    }
+  }
+
+  .table-popover-body-cells {
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+  }
+
+  .table-popover-header-cells {
+    &:not(:last-child) {
+      border-right: 1px solid;
+    }
+  }
+}

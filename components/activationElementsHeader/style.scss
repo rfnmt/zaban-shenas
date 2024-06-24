@@ -1,0 +1,35 @@
+@import "/assets/typography.scss";
+
+.activation-elements-header {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  column-gap: 16px;
+
+  &.special-gem-class {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      margin-bottom: 8px;
+      @include Fa_Subtitle_1_opposite();
+    }
+    .description {
+      @include Fa_Subtitle_2_Opposite();
+    }
+  }
+
+  .pic {
+    width: 88px;
+    position: relative;
+    img {
+      width: inherit;
+      position: unset !important;
+    }
+  }
+}

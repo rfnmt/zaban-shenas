@@ -1,0 +1,29 @@
+@import "/assets/typography.scss";
+.challenges-info-with-progress {
+  border-radius: 10px;
+  .challenge-item {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 48px 1fr 40px;
+    column-gap: 20px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid;
+    }
+
+    .challenge-item-title {
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        &:first-of-type {
+          @include Fa_Subtitle_2();
+        }
+        &:last-of-type {
+          @include Fa_Tag();
+        }
+      }
+    }
+  }
+}

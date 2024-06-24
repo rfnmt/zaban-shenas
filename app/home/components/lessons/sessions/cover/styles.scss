@@ -1,0 +1,107 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.home-pages-session-items-cover {
+  .session-state {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+
+  .active-session {
+    img {
+      animation: pulse-image 2s infinite;
+    }
+  }
+
+  .img-wrapper {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .passed-session-gradient {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(
+        0deg,
+        #000000,
+        rgba(0, 0, 0, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+
+      border-radius: 50%;
+    }
+
+    .passed-icon {
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .locked-icon {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 12;
+    }
+
+    .locked-session-cover-filter {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.4);
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      z-index: 10;
+    }
+  }
+
+  @keyframes pulse-image {
+    0% {
+      transform: scale(0.9);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(0.9);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+}

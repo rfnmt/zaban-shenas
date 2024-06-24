@@ -1,0 +1,23 @@
+.story-header-wrapper {
+  text-align: center;
+
+  .story-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  .audio-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    .wrapper-sentences {
+      width: fit-content;
+    }
+  }
+}

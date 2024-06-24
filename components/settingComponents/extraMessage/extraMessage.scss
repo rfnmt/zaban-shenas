@@ -1,0 +1,15 @@
+@import "/assets/typography.scss";
+
+.notif-reminder-long-text {
+  margin: auto;
+  max-width: 768px;
+  padding: 8px 8px 0 8px;
+  @include Fa_Tag();
+}
+
+.extra-message-text {
+  margin: auto;
+  max-width: 768px;
+  padding: 24px 0 16px 0;
+  @include Fa_Tag();
+}

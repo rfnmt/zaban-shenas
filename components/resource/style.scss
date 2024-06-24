@@ -1,0 +1,126 @@
+@import "/assets/typography.scss";
+@import "/assets/mixin.scss";
+
+.resource-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  // margin-bottom: 24px;
+
+  .pulse {
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  img {
+    position: absolute;
+    inset: 0px;
+    color: transparent;
+    // border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .video-element {
+    object-fit: cover;
+    // border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .toggle-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: auto;
+    z-index: 1;
+    transition: 0.1s ease-in opacity;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+  }
+
+  .progress-bar {
+    z-index: 1;
+    height: 10px;
+    background-color: #ffffff80;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    .MuiLinearProgress-bar {
+      background-color: #fff !important;
+    }
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    background-color: transparent;
+    margin: unset !important;
+    direction: ltr;
+  }
+
+  /* Track: webkit browsers */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: transparent !important;
+  }
+
+  /* Track: Mozilla Firefox */
+  input[type="range"]::-moz-range-track {
+    height: 10px;
+    background: transparent !important;
+  }
+
+  /* Thumb: webkit */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -407px 0 0 400px #fff;
+  }
+
+  /* Thumb: Firefox */
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -407px 0 0 400px #fff;
+  }
+
+  .range {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5019607843);
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    width: 99.5%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,22 @@
+@import "/assets/typography.scss";
+.suggested-friends-layout {
+  .suggested-friends-loading {
+    height: calc(100vh - 135px);
+    max-width: 768px;
+    margin: 0 auto;
+    top: unset !important;
+  }
+  .suggested-friends-animation {
+    padding-top: 71px;
+    .suggested-friendList {
+      max-width: 768px;
+      margin: 0 auto;
+      direction: rtl;
+      height: calc(100vh - 135px);
+      overflow-y: scroll;
+      .suggested-friends-title {
+        padding: 16px;
+      }
+    }
+  }
+}

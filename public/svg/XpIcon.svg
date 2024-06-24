@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_10311" data-name="Rectangle 10311" width="24" height="24" transform="translate(11083 7225)" fill="#ffc5c5"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.915" x2="0.5" y2="-0.033" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f69134"/>
+      <stop offset="1" stop-color="#f6f102"/>
+    </linearGradient>
+  </defs>
+  <g id="Xp_icon" data-name="Xp icon" transform="translate(-11083 -7225)" clip-path="url(#clip-path)">
+    <g id="layer1" transform="translate(11083.942 7226.443)">
+      <path id="path6829" d="M17.179,19.939c-1.65,1.2-4.095-1.717-6.133-1.718S6.559,21.13,4.911,19.93s.367-4.425-.261-6.364S.5,10.2,1.129,8.26,5.45,7.242,7.1,6.045s1.921-4.99,3.959-4.989,2.3,3.8,3.952,4.995,5.34.285,5.968,2.223-2.9,3.364-3.529,5.3,1.379,5.166-.27,6.363Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

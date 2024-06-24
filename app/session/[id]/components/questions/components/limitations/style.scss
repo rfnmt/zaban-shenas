@@ -1,0 +1,18 @@
+.question-limitations {
+  position: fixed !important;
+  left: 10px;
+  bottom: calc(env(safe-area-inset-bottom) + 90px);
+  z-index: 980;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  direction: rtl;
+  box-shadow: 0 1px 1px #00000029 !important;
+  border-radius: 10px !important;
+
+  p {
+    margin-right: 8px;
+    font-size: 12px;
+  }
+}

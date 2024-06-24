@@ -1,0 +1,39 @@
+@import "/assets/typography.scss";
+.story-multiple-choice-question {
+  margin-top: 24px;
+  .story-multiple-choice-question-prompt {
+    margin-bottom: 24px;
+    direction: rtl;
+    @include Fa_Subtitle_1();
+  }
+
+  .wrap-multiple-choice-question-choices {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    position: relative;
+
+    .wrap-parent-element {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    label {
+      margin-right: unset !important;
+      span {
+        &:first-of-type {
+          padding: unset !important;
+          border-radius: 5px !important;
+        }
+        &:last-of-type {
+          padding: 9px !important;
+          direction: ltr;
+        }
+      }
+    }
+  }
+}

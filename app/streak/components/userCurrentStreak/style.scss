@@ -1,0 +1,17 @@
+@import "/assets/typography.scss";
+.total-streak-amount {
+  display: flex;
+  width: 100%;
+  padding-top: 16px;
+  img {
+    align-self: flex-start;
+  }
+  .get-streak-days {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    div {
+      @include Fa_Subtitle_1;
+    }
+  }
+}

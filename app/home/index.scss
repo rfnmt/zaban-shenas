@@ -1,0 +1,111 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.academy-home {
+  direction: rtl;
+  min-height: calc(100dvh - env(safe-area-inset-bottom));
+
+  .locked-session-snackbar {
+    bottom: 24px;
+    right: auto;
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    right: auto;
+    left: auto;
+    padding: 0 24px;
+
+    .MuiPaper-root {
+      width: 100%;
+
+      .body-snackbar {
+        display: flex;
+        gap: 8px;
+
+        p {
+          @include Fa_body_opposite();
+        }
+      }
+    }
+  }
+
+  .academy-home-content {
+    overflow: scroll;
+  }
+
+  .course-is-empty {
+    height: calc(100vh - 73px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .index-loading {
+    position: relative;
+
+    .MuiBackdrop-root {
+      position: absolute;
+    }
+  }
+
+  .container-without-padding {
+    .lesson-list {
+      padding-bottom: 16px !important;
+      overflow: scroll;
+    }
+  }
+
+  .wrap-session-skeleton {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .cover-skeleton {
+      width: 100%;
+      height: 100%;
+    }
+
+    .session-skeleton {
+      padding: 8px 16px;
+      width: 100%;
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 8px;
+
+      .MuiSkeleton-circular {
+        width: 72px;
+        height: 72px;
+      }
+
+      .MuiSkeleton-rounded {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.header-drop-down {
+  z-index: 99999 !important;
+  .MuiPaper-root {
+    width: 180px;
+    text-align: right;
+    direction: rtl;
+
+    .MuiButtonBase-root {
+      @include Fa_Body();
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}

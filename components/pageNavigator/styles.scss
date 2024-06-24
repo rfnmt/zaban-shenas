@@ -1,0 +1,44 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.wrap-page-navigator {
+  direction: rtl;
+  display: flex;
+  border: unset;
+  min-height: 64px;
+  justify-content: center;
+  box-shadow: unset;
+
+  padding: calc(env(safe-area-inset-top)) calc(env(safe-area-inset-right))
+    calc(env(safe-area-inset-bottom)) calc(env(safe-area-inset-left));
+
+  .container-without-padding {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .item {
+      flex: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        margin-top: 8px;
+        font-size: 12px;
+        position: relative;
+
+        .red-bullet {
+          width: 7px;
+          height: 7px;
+          position: absolute;
+          top: -35px;
+          right: 0;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

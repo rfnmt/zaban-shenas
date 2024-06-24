@@ -1,0 +1,78 @@
+@import "/assets/typography.scss";
+.subscriptions-price {
+  padding: 16px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+
+  .variations-wrapper {
+    height: 98px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &:last-of-type {
+      margin-bottom: unset;
+    }
+
+    .enrolling {
+      padding: 4px 8px;
+      width: fit-content;
+      transform: skewX(-20deg);
+      border-radius: 10px;
+      p {
+        transform: skewX(20deg);
+        @include Fa_Subtitle_1_opposite();
+      }
+    }
+
+    .values-wrapper {
+      display: flex;
+      align-items: center;
+      .subtitle {
+        margin-left: 8px;
+        @include Fa_Tag_opposite();
+      }
+
+      .value-with-discount {
+        display: flex;
+        align-items: center;
+
+        del {
+          margin: 0 2px;
+          @include Fa_Tag_opposite();
+        }
+        p {
+          margin: 0 2px;
+          @include Fa_Subtitle_1();
+        }
+      }
+
+      .value-without-discount {
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0 2px;
+          @include Fa_Subtitle_1_opposite();
+        }
+      }
+    }
+
+    .featured {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 50px;
+
+      img {
+        display: inline-block;
+        width: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.toggle-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: auto;
+  z-index: 1;
+  transition: 0.1s ease-in opacity;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}

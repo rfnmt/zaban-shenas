@@ -1,0 +1,52 @@
+@import "/assets/typography.scss";
+
+.activation-bottomSheet {
+  max-width: 768px;
+  margin: 0 auto;
+  direction: rtl;
+  z-index: 10000 !important;
+  .react-modal-sheet-container {
+    border-top-right-radius: 11px !important;
+    border-top-left-radius: 11px !important;
+    box-shadow: unset !important;
+  }
+
+  .activationBuyingGem_body {
+    padding: 16px 16px 24px 16px;
+
+    .activation {
+      @include Fa_Body();
+
+      .activation-label {
+        margin-left: 16px;
+      }
+      .diamond {
+        width: 20px !important;
+        height: 20px !important;
+        position: unset !important;
+      }
+    }
+
+    .later {
+      width: fit-content;
+      margin: 28px auto 0 auto;
+      display: flex;
+      background-color: transparent;
+      min-width: unset;
+      @include Fa_Body();
+      &:active {
+        transform: unset;
+      }
+    }
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    margin: 0 auto;
+    left: unset !important;
+  }
+}
+
+.activation-product-purchase-loading {
+  position: absolute !important;
+}

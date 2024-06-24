@@ -1,0 +1,25 @@
+@import "@/assets/mixin.scss";
+@import "@/assets/typography.scss";
+
+.tip-header-wrapper {
+  // padding: 22px 16px 24px;
+  padding: 22px 16px 0;
+  position: relative;
+
+  .image {
+    position: relative !important;
+    border-radius: 15px;
+    margin-bottom: 16px;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .title {
+    margin-bottom: 8px;
+    @include Fa_Subtitle_1();
+  }
+
+  .sub-title {
+    @include Fa_Tag();
+  }
+}

@@ -1,0 +1,47 @@
+@import "/assets/typography.scss";
+
+.common-header-for-bottom-sheets {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  .header-top-part {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px 0 16px 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+
+  .header-bottom-part {
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    justify-content: space-around;
+    padding: 0 16px 16px 16px;
+
+    .title {
+      direction: ltr;
+      @include Fa_Subtitle_1();
+    }
+
+    .report-special-content-button {
+      padding: unset;
+      height: 48px;
+      width: 48px;
+      border-radius: 100px;
+      min-width: unset;
+      font-size: 14px !important;
+      font-family: IRANSans;
+    }
+  }
+}

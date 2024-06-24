@@ -1,0 +1,40 @@
+@import "/assets/typography.scss";
+.daily-challenge-layout {
+  height: 100vh;
+
+  > div {
+    height: inherit;
+    .daily-challenge-page {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .gemImage-totalGem {
+    display: flex;
+    width: 100%;
+    padding-top: 16px;
+    img {
+      align-self: flex-start;
+    }
+
+    .aquired-gems {
+      margin-left: 5px;
+      @include Fa_Placeholder;
+    }
+  }
+
+  .challenge-title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 56px;
+    margin-bottom: 24px;
+  }
+
+  .Z3DButton {
+    margin-bottom: 24px;
+  }
+}

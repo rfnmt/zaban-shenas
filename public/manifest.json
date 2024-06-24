@@ -1,0 +1,43 @@
+{
+  "short_name": "Zaban Amooz",
+  "name": "Zaban Amooz | لذت یادگیری زبان انگلیسی",
+  "version": "1.0.0",
+  "manifest_version": 1,
+  "description": "لذت یادگیری زبان انگلیسی",
+  "categories": ["learning", "business"],
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "natural",
+  "theme_color": "#00429E",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icon/logo/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/logo/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/logo/384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/logo/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon/logo/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

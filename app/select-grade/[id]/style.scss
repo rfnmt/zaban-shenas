@@ -1,0 +1,88 @@
+@import "/assets/typography.scss";
+.sub-course-slider {
+  // position: relative;
+  overflow: hidden;
+  height: calc(100dvh - 64px);
+
+  .filter_backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // filter: blur(10px);
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      pointer-events: none;
+    }
+  }
+
+  .swiper {
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .swiper-wrapper {
+      height: calc(100dvh - 150px);
+      padding-top: 24px;
+    }
+
+    .swiper-slide {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      .slid-image {
+        position: relative;
+        flex: 1.6;
+
+        .lesson-items-image {
+          object-fit: cover;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+      }
+
+      .lesson-details-wrapper {
+        flex: 0.4;
+        padding: 16px;
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .main-title {
+        margin-bottom: 8px;
+        @include Fa_Body();
+      }
+      .count-of-studied-lessons {
+        margin-bottom: 16px;
+        @include Fa_Subtitle_2();
+      }
+      .continue-completed {
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+      .description {
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      padding: 20px;
+    }
+  }
+}

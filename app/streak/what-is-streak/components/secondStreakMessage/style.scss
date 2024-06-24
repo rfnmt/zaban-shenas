@@ -1,0 +1,18 @@
+@import "/assets/typography.scss";
+.whatIsStreak-flame {
+  svg {
+    width: 30% !important;
+    height: 100% !important;
+    transform: scale(2.3) translateX(-22%) translateY(-50px) !important;
+    position: relative !important;
+    left: 50% !important;
+  }
+}
+
+.whatIsStreak-mainChain-caption {
+  @include Fa_Subtitle_1();
+}
+
+.whatIsStreak-subChain-caption {
+  @include Fa_Placeholder();
+}

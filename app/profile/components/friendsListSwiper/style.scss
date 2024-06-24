@@ -1,0 +1,70 @@
+@import "/assets/typography.scss";
+.swiper-suggested-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  p:first-of-type {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    justify-content: space-between;
+  }
+}
+
+.profile-swiper-wrapper {
+  direction: rtl;
+  overflow: unset;
+  margin-bottom: 24px;
+  .swiper-slide {
+    width: fit-content;
+    margin-left: 8px;
+    margin-right: 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #00000029;
+    &:first-of-type {
+      margin-right: 0;
+    }
+  }
+  .info-swiperSlide {
+    width: 144px;
+    height: 182px;
+    padding: 8px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 40px;
+
+    .delete-friend {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      cursor: pointer;
+    }
+
+    .wrap-pic-name-reason {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      cursor: pointer;
+      img {
+        border-radius: 50%;
+      }
+      .friend-name {
+        text-align: center;
+        @include En_Body;
+        font-family: IRANSans !important;
+      }
+      .friend-reason {
+        text-align: center;
+        @include Fa_Tag;
+      }
+    }
+
+    .swiper-adding-friends {
+      direction: ltr;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.story-match-pairs-wrapper {
+  margin-top: 32px;
+  .story-match-question-prompt {
+    @include Fa_Subtitle_1();
+    margin-bottom: 24px;
+    text-align: right;
+    direction: rtl;
+  }
+  .story-match-question-pairs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 18px;
+
+    .pairs-item {
+      min-height: 27px;
+      padding: 12px 8px;
+      border: 2px solid transparent;
+      transition: 0.1s all ease-in-out;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .equalizer {
+        max-height: 24px;
+      }
+
+      .tts-play-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+}

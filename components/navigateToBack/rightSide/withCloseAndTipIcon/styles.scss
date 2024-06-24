@@ -1,0 +1,36 @@
+@import "/assets/typography.scss";
+
+.logout-question-modal {
+  .MuiPaper-root {
+    width: 327px;
+    border-radius: 10px;
+    box-shadow: unset;
+  }
+
+  .logout-question-modal-content-parent {
+    padding: 16px;
+    direction: rtl;
+    .logout-title {
+      margin-bottom: 8px;
+      @include Fa_Subtitle_1();
+    }
+
+    .logout-question {
+      margin-bottom: 16px;
+      @include Fa_Subtitle_2();
+    }
+
+    .return-exit-botton {
+      display: flex;
+      justify-content: flex-end;
+
+      .return,
+      .exit {
+        min-width: unset;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px 12px 12px 8px;
+      }
+    }
+  }
+}

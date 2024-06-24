@@ -1,0 +1,111 @@
+@import "/assets/typography.scss";
+
+.wrapCodeInput {
+  max-width: 768px;
+  padding: 48px 0 24px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  height: 100%;
+
+  .codeInput {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .icon-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: 48px;
+      min-width: unset;
+      padding: unset;
+
+      svg {
+        width: 48px;
+      }
+    }
+
+    .confirmation-code {
+      margin-top: 32px;
+      @include Fa_Header();
+    }
+
+    .codeLabel {
+      margin-top: 48px;
+      text-align: center;
+      @include Fa_Body();
+    }
+
+    .codeDetail {
+      margin-top: 68px;
+      @include Fa_Body();
+    }
+
+    .codeInputs {
+      margin-top: 36px;
+
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: center;
+      column-gap: 32px;
+
+      .smsCodes {
+        input {
+          cursor: text;
+          opacity: 0.7;
+          direction: ltr;
+          overflow: hidden;
+          position: relative;
+          text-align: center;
+          border-radius: 15px;
+          @include Fa_Pageheader();
+          width: 45px;
+          height: 45px;
+          border: unset;
+          padding: unset;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          &[type="number"] {
+            -moz-appearance: textfield;
+          }
+        }
+
+        fieldset {
+          display: none;
+        }
+      }
+    }
+
+    .codeError {
+      margin-top: 16px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .resendCode {
+      margin-top: 48px;
+      text-align: center;
+
+      button {
+        @include Fa_Body();
+      }
+
+      .remaining-time {
+        @include Fa_Tag();
+      }
+    }
+  }
+}

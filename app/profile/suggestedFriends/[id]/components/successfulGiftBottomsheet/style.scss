@@ -1,0 +1,104 @@
+@import "/assets/typography.scss";
+.gift-successful {
+  z-index: 1200 !important;
+  max-width: 768px;
+  margin: 0 auto;
+
+  .react-modal-sheet-container {
+    box-shadow: unset !important;
+  }
+  .successful-gift-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    padding: 0 16px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: unset;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      left: 50%;
+      top: 11px;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+
+  .react-modal-sheet-content {
+    height: 100%;
+    padding: 24px 16px;
+  }
+
+  .user-pic-name {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 32px;
+    img,
+    svg {
+      margin-left: 16px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      @include Fa_Subtitle_2;
+    }
+  }
+
+  .user-dialogue {
+    border: 1px solid;
+    border-radius: 10px;
+    position: relative;
+    padding: 16px;
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      right: 18px;
+      width: 33px;
+      height: 16px;
+      transform: rotate(130deg) skew(-50deg);
+      border-left: 2px solid;
+      border-bottom: 1.5px solid;
+      border-bottom-left-radius: 5px;
+    }
+
+    .dialogue-texts {
+      display: flex;
+      flex-direction: row-reverse;
+      position: relative;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      margin-bottom: 16px;
+      p {
+        @include Fa_Subtitle_2;
+      }
+    }
+    .gift-bottomsheet-elements {
+      margin-bottom: unset;
+    }
+    .activation-elements-header {
+      margin-bottom: unset;
+      grid-template-columns: 10fr 1fr;
+      .pic {
+        width: 64px;
+        display: flex;
+      }
+      img {
+        height: 64px !important;
+        width: 64px !important;
+      }
+    }
+  }
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    left: unset !important;
+  }
+}

@@ -1,0 +1,29 @@
+@import "/assets/typography.scss";
+.report-text-area-parent {
+  text-align: center;
+  // height: 156px;
+  display: flex;
+  flex-direction: column;
+  .description {
+    @include Fa_Subtitle_1();
+    margin-bottom: 16px;
+    text-align: right;
+  }
+  .text-area {
+    overflow: auto !important;
+    outline: none;
+    resize: none;
+    width: 100%;
+    font-family: IRANSans;
+    text-align: right;
+    padding: 16px;
+    // height: 156px;
+    @include Fa_Body();
+    border-radius: 15px !important;
+    border: 1px solid;
+    &::placeholder {
+      color: #777777;
+      @include Fa_Placeholder();
+    }
+  }
+}

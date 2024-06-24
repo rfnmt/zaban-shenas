@@ -1,0 +1,9 @@
+@import "/assets/typography.scss";
+.onboarding-question-part {
+  padding: 14px 16px;
+
+  .title {
+    @include Fa_Subtitle_1();
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,26 @@
+.user-badges {
+  margin: 24px 0;
+  .medal-title {
+    margin-bottom: 16px;
+    text-align: right;
+  }
+
+  .medals-holder {
+    border-radius: 10px;
+    .medals {
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+      direction: rtl;
+      img {
+        margin: 0 8px;
+      }
+    }
+    .see-all {
+      cursor: pointer;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

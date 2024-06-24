@@ -1,0 +1,17 @@
+.invited_friends_list_wrapper {
+  .container {
+    padding: unset !important;
+  }
+  .students-items {
+    margin-top: unset !important;
+    position: relative;
+    top: 16px;
+    .student-item {
+      direction: rtl;
+      grid-template-columns: 1fr 49px;
+    }
+  }
+  .invited-friends-loading {
+    height: calc(100vh - 65px);
+  }
+}

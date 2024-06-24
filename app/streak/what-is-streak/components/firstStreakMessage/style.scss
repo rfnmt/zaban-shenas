@@ -1,0 +1,63 @@
+@import "/assets/typography.scss";
+.whatIsStreak-icon-counter {
+  // padding-top: 77px;
+  padding-top: 113px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  .get-streak-days {
+    // width: 100px;
+    width: 79px;
+    text-align: center;
+    //font-size: 120px;
+    font-size: 100px;
+  }
+}
+
+.whatIsStreak-weekdays {
+  margin-top: 24px;
+  height: 89px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+
+  .user-study-chain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+
+    .days-name {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+      flex-direction: row-reverse;
+      p {
+        width: 24px;
+        text-align: center;
+        @include Fa_Body();
+      }
+    }
+
+    .userChains {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.whatIsStreak-caption {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+  text-align: center;
+  @include Fa_Subtitle_1();
+}

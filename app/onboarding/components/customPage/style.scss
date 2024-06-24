@@ -1,0 +1,42 @@
+@import "/assets/typography.scss";
+.onboarding-customPage-part {
+  padding-bottom: 14px;
+  box-sizing: border-box;
+  .title {
+    @include Fa_Subtitle_1();
+    margin-bottom: 8px;
+  }
+  .description {
+    @include Fa_Tag();
+    margin-bottom: 16px;
+  }
+
+  .suggestion-wrapper {
+    text-align: center;
+    .image-wrapper {
+      display: flex;
+      max-width: 768px;
+      margin: 0 auto 24px auto;
+      .suggestion-image {
+        object-fit: cover;
+        height: 400px !important;
+        position: unset !important;
+      }
+    }
+
+    .explaination {
+      padding: 0 16px;
+    }
+    .title {
+      @include Fa_Subtitle_1();
+      margin-bottom: 8px;
+    }
+    .description {
+      @include Fa_Subtitle_1();
+      margin-bottom: 8px;
+    }
+    .sub-description {
+      @include Fa_Placeholder();
+    }
+  }
+}

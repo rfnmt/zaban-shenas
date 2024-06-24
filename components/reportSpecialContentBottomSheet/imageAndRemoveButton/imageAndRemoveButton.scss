@@ -1,0 +1,18 @@
+.close-icon-and-img-wrapper {
+  display: flex;
+  position: relative;
+  .close {
+    position: absolute;
+    padding: unset !important;
+    min-width: unset !important;
+    right: -5px;
+    top: 6px;
+    border-radius: 50%;
+  }
+  .show-img {
+    margin: 18px 8px 0 8px;
+    width: 34px;
+    height: 68px;
+    object-fit: contain;
+  }
+}

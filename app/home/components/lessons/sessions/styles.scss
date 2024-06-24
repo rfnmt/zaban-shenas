@@ -1,0 +1,101 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.home-session-item {
+  position: relative;
+  padding: 8px 16px;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  // gap: 16px;
+  justify-content: space-around;
+
+  &.disable-session {
+    opacity: 0.5;
+  }
+
+  .action-area {
+    width: 100%;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    justify-content: space-around;
+    align-items: center;
+    padding: unset;
+
+    .typography {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      overflow: hidden;
+
+      .title {
+        @include Fa_Subtitle_1();
+
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 1;
+        // line-clamp: 1;
+        // -webkit-box-orient: vertical;
+        // white-space: nowrap;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+      }
+
+      @supports (display: -webkit-box) {
+        .title {
+          /* autoprefixer: off */
+          // display: -webkit-box;
+          // -webkit-box-orient: vertical;
+          // -webkit-line-clamp: 1;
+          // white-space: normal;
+        }
+      }
+
+      .subtitle {
+        @include Fa_Tag();
+
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 2;
+        // overflow: hidden;
+
+        // text-overflow: ellipsis;
+        // unicode-bidi: embed;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 3;
+        // line-clamp: 3;
+        // -webkit-box-orient: vertical;
+        // white-space: nowrap;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+      }
+
+      @supports (display: -webkit-box) {
+        .subtitle {
+          /* autoprefixer: off */
+          // display: -webkit-box;
+          // -webkit-box-orient: vertical;
+          // -webkit-line-clamp: 2;
+          // white-space: breal-spaces;
+          // direction: ltr;
+          // text-align: left;
+        }
+      }
+    }
+  }
+
+  .session-report-button {
+    min-width: unset !important;
+    padding: unset !important;
+  }
+}

@@ -1,0 +1,30 @@
+.make-sentence-with-choice-wrapper {
+  .wrap-selected-options {
+    min-height: 150px;
+    background-size: 100% 65px;
+    position: relative;
+    border-radius: 10px;
+    line-height: 65px;
+
+    .choice-item {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 16px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .make-sentence-with-choice {
+    min-height: 200px;
+    margin-top: 40px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    row-gap: 8px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}

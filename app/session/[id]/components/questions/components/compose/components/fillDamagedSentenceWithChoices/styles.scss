@@ -1,0 +1,29 @@
+.fill-damaged-sentence-with-choices {
+  .wrap-sentence {
+    width: 100%;
+    line-height: 80px;
+    .slice {
+      box-sizing: border-box;
+      transition: 0.1s all;
+      // height: 50px;
+
+      line-height: 50px;
+
+      // display: inline-block;
+
+      &::before {
+        content: "\200b";
+      }
+
+      &.blank {
+        text-align: center;
+
+        span {
+          border-radius: 5px;
+          padding: 8px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "/assets/typography.scss";
+.activation-bottomSheet-body-content {
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+
+  .pic-description-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    grid-template-rows: 1fr 0fr;
+    gap: 24px 16px;
+
+    &:last-of-type {
+      gap: unset;
+      column-gap: 16px;
+    }
+
+    .description-pic {
+      width: 64px;
+      height: 64px;
+      position: relative;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    .title {
+      margin-bottom: 8px;
+      display: flex;
+
+      p {
+        margin: 0 2px;
+        @include Fa_Subtitle_1();
+      }
+    }
+
+    .subtitle {
+      @include Fa_Subtitle_2();
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "/assets/typography.scss";
+.user-info-summary {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 48px auto 64px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+
+  .edit-profile {
+    display: flex;
+    align-items: center;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .user-profile-name {
+    direction: rtl;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .fa-style {
+      @include Fa_Subtitle_1();
+    }
+    .en-style {
+      @include En_Subtitle();
+    }
+
+    .user-pseudonym-name {
+      @include En_Tag();
+    }
+  }
+  .friends-wrapper {
+    display: flex;
+    div:first-of-type {
+      margin-left: 16px;
+    }
+    span {
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+
+  .user-profile-pic {
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,59 @@
+@import "/assets/typography.scss";
+
+.simpleModalComponentWrapper {
+  .MuiDialog-paperWidthSm {
+    margin: 24px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: unset;
+    width: 327px;
+  }
+
+  .modal-options {
+    height: 100%;
+    padding: 16px;
+
+    fieldset.MuiFormControl-root {
+      width: 100%;
+      direction: rtl;
+    }
+
+    legend.MuiFormLabel-root {
+      @include Fa_Subtitle_1();
+      margin-bottom: 16px;
+    }
+
+    .modal-options-radioGroup {
+      flex-wrap: unset;
+      .radioButton-wrapper {
+        padding: unset;
+        margin-bottom: 8px;
+        .MuiFormControlLabel-root {
+          height: 40px;
+          margin: 0;
+          width: 100%;
+          .radioButton {
+            padding: 0;
+          }
+
+          .MuiTypography-root {
+            padding-right: 8px;
+            @include Fa_Body();
+          }
+        }
+      }
+    }
+
+    .cancel {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        width: 48px;
+        height: 48px;
+        padding: unset;
+        min-width: unset;
+        font-size: 15px;
+      }
+    }
+  }
+}

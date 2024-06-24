@@ -1,0 +1,79 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.lesson-item {
+  .lesson-cover {
+    width: 100%;
+    display: flex;
+    position: relative;
+    min-height: 150px;
+    background-size: cover;
+    align-items: start;
+    flex-direction: column;
+    background-position: center;
+    justify-content: end;
+
+    @media (min-width: 769px) {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .lesson-count-with-session-passed {
+      z-index: 1 !important;
+      padding: 0 16px;
+
+      p {
+        display: inline-block;
+      }
+
+      .dot {
+        position: relative;
+        top: -2px;
+        padding: 0 8px;
+      }
+
+      .lesson-count {
+        @include Fa_Subtitle_1_opposite();
+      }
+
+      .passed-session-count {
+        @include Fa_Subtitle_1_opposite();
+      }
+    }
+
+    .wrap-description {
+      align-items: start;
+      background-position: center;
+      z-index: 1 !important;
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px;
+
+      .description {
+        z-index: 1;
+        @include Fa_Subtitle_2_Opposite();
+      }
+    }
+
+    .bottom-shadow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(
+        360deg,
+        #000000,
+        rgba(44, 44, 44, 0.6) 50%,
+        rgba(84, 84, 84, 0) 100%
+      );
+    }
+
+    img {
+      background: beige;
+      width: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: relative !important;
+      min-height: 150px;
+    }
+  }
+}

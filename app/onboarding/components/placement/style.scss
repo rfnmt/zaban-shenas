@@ -1,0 +1,27 @@
+@import "/assets/typography.scss";
+.onboarding-placement-wrapper {
+  padding: 14px 16px;
+  .title {
+    @include Fa_Subtitle_1();
+    margin-bottom: 8px;
+  }
+  .description {
+    @include Fa_Tag();
+    margin-bottom: 16px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    @include Fa_Body();
+
+    img {
+      margin-left: 32px;
+    }
+  }
+}

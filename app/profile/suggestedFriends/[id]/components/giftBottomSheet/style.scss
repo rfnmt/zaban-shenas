@@ -1,0 +1,122 @@
+@import "/assets/typography.scss";
+.gift-bottomsheet {
+  z-index: 1200 !important;
+  max-width: 768px;
+  margin: 0 auto;
+
+  .react-modal-sheet-container {
+    // these heights are for theme
+    > div:last-of-type {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+
+  .giftTypeSlides {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+    }
+
+    .subscription-variations {
+      display: flex;
+      padding: 16px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: unset;
+      }
+      p:first-of-type {
+        margin-left: auto;
+      }
+      p:last-of-type {
+        margin-left: 8px;
+      }
+    }
+
+    .title {
+      text-align: right;
+      margin-bottom: 16px;
+      @include Fa_Subtitle_1;
+    }
+    .sub-title {
+      text-align: right;
+      margin-bottom: 16px;
+      @include Fa_Tag;
+    }
+
+    &.second-slide {
+      height: 100%;
+      .message-to-user {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        direction: rtl;
+        column-gap: 8px;
+        padding: 8px 16px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+      }
+      .user-dialogue {
+        border: 1px solid;
+        border-radius: 10px;
+        position: relative;
+        padding: 16px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -9px;
+          right: 18px;
+          width: 33px;
+          height: 16px;
+          transform: rotate(130deg) skew(-50deg);
+          border-left: 2px solid;
+          border-bottom: 1.5px solid;
+          border-bottom-left-radius: 5px;
+        }
+
+        .gift-bottomsheet-elements {
+          margin-bottom: unset;
+        }
+        .activation-elements-header {
+          margin-bottom: unset;
+          grid-template-columns: 10fr 1fr;
+          .pic {
+            width: 64px;
+            display: flex;
+          }
+          img {
+            height: 64px !important;
+            width: 64px !important;
+          }
+        }
+      }
+    }
+
+    .gift-bottomsheet-elements {
+      &:last-of-type {
+        margin-bottom: unset;
+      }
+    }
+    .gift-payment {
+      margin-top: auto;
+
+      .threeDots-animation {
+        svg {
+          width: 40px !important;
+          height: 30px !important;
+        }
+      }
+    }
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    left: unset !important;
+  }
+}

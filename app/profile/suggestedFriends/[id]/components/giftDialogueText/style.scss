@@ -1,0 +1,12 @@
+@import "/assets/typography.scss";
+.dialogue-texts {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  margin-bottom: 16px;
+  p {
+    @include Fa_Subtitle_2;
+  }
+}

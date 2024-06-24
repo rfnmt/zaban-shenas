@@ -1,0 +1,40 @@
+@import "/assets/typography.scss";
+.streak-wrapper {
+  min-height: 100vh;
+
+  .streak-page-animation {
+    min-height: inherit;
+  }
+
+  .streak-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: inherit;
+
+    .main-title {
+      direction: rtl;
+      margin-top: 24px;
+      text-align: center;
+      @include Fa_Pageheader();
+    }
+
+    .sub-title {
+      direction: rtl;
+      margin: 8px 0 16px 0;
+      text-align: center;
+      @include Fa_Body();
+    }
+  }
+
+  .flame {
+    width: 200px;
+    svg {
+      width: 35% !important;
+      height: 100% !important;
+      transform: scale(3) translateX(-18%) translateY(-42px) !important;
+      position: relative !important;
+      left: 50% !important;
+    }
+  }
+}

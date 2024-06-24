@@ -1,0 +1,17 @@
+@import "/assets/typography.scss";
+.checkout-bottomSheet {
+  direction: ltr;
+  max-width: 768px;
+  margin: 0 auto;
+  z-index: 10001 !important;
+  .react-modal-sheet-container {
+    box-shadow: unset !important;
+    border-top-right-radius: 12px !important;
+    border-top-left-radius: 12px !important;
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px !important;
+    left: unset !important;
+  }
+}

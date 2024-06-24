@@ -1,0 +1,21 @@
+@import "/assets/typography.scss";
+.whatIsStreakLayout-wrapper {
+  min-height: 100vh;
+
+  .whatIsStreak-animation {
+    min-height: inherit;
+  }
+
+  .whatIsStreak-data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: inherit;
+  }
+
+  .continueButton {
+    margin-top: auto;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}

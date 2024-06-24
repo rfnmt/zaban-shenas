@@ -1,0 +1,150 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.session-completed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  .wrap-animate {
+    min-height: 100svh;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    max-width: 768px;
+    padding: 5px;
+    margin: auto;
+
+    > * {
+      width: 100%;
+    }
+
+    .title {
+      @include Fa_Header();
+      text-align: center;
+    }
+
+    .wrap-lottie-animation {
+      width: calc(100svh / 3);
+      height: calc(100svh / 3);
+
+      margin: auto;
+
+      .lottie-animation {
+        width: auto !important;
+        margin: auto;
+      }
+    }
+
+    .statistics {
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 5px;
+
+      .accuracy {
+        padding: 2px;
+        min-width: 150px;
+        border-radius: 10px;
+        background: linear-gradient(270deg, #12a24e 0%, #0fdc60 100%);
+
+        .statistic-title {
+          color: #fff;
+          font-size: 14px;
+          margin: 4px auto;
+          text-align: center;
+        }
+
+        .statistic-detail {
+          border-radius: 8px;
+          height: 54px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          .icon {
+            display: flex;
+          }
+
+          .typography {
+            @include Fa_Header();
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .bold {
+              @include Fa_Header();
+            }
+
+            .tag {
+              margin: auto 2px;
+              display: flex;
+              align-items: center;
+              @include Fa_Tag();
+            }
+          }
+        }
+      }
+
+      .gained-xp {
+        padding: 2px;
+        min-width: 150px;
+        border-radius: 10px;
+        background: linear-gradient(270deg, #7000b9 0%, #e74bff 100%);
+
+        .statistic-title {
+          color: #fff;
+          font-size: 14px;
+          margin: 4px auto;
+          text-align: center;
+        }
+
+        .statistic-detail {
+          border-radius: 8px;
+          height: 54px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          .icon {
+            display: flex;
+          }
+
+          .typography {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .bold {
+              @include Fa_Header();
+            }
+
+            .tag {
+              margin: auto 2px;
+              display: flex;
+              align-items: center;
+              @include Fa_Tag();
+            }
+          }
+        }
+      }
+    }
+
+    .continue {
+      box-shadow: 0 1px 1px #00000029 !important;
+      height: 48px;
+      color: #fff;
+      border-radius: 10px;
+    }
+  }
+}

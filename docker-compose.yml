@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pwa-academy:
+    container_name: pwa-academy
+    image: '{{ IMAGE }}'
+    restart: always
+    networks:
+      - reverse-proxy
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy

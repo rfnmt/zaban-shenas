@@ -1,0 +1,18 @@
+.multiple-questions-checkbox-selection {
+  label {
+    margin: unset !important;
+    span {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        padding: 8px;
+        width: fit-content;
+        margin: 0 4px 8px 4px;
+        // border: 1px solid gray;
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "/assets/typography.scss";
+.follow-list-wrapper {
+  overflow-y: scroll;
+  // height: calc(100vh - 190px);
+  height: calc(100vh - 188px);
+
+  .followList-animation {
+    width: 256px;
+    height: 192px;
+    margin: 0 auto 24px auto;
+  }
+
+  .bold-follow-title {
+    text-align: center;
+    margin-bottom: 8px;
+    padding: 0 8px;
+    @include Fa_Subtitle_1();
+  }
+  .medium-follow-title {
+    text-align: center;
+    padding: 0 8px;
+    @include Fa_Placeholder();
+  }
+
+  .adding-new-friends {
+    display: flex;
+
+    margin: 24px auto 24px auto;
+    svg {
+      transform: rotate(45deg);
+      margin-left: 8px;
+    }
+  }
+}

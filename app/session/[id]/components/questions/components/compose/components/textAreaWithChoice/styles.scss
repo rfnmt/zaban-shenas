@@ -1,0 +1,28 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.wrapp-text-area-with-choice {
+  .text-area {
+    // background: red;
+    height: 100%;
+    max-height: 160px;
+    min-height: 160px;
+    border-radius: 10px;
+    resize: none;
+    margin: unset;
+    padding: 16px;
+    overflow: hidden;
+    width: -webkit-fill-available;
+    @include Fa_Body();
+
+    &:focus-visible {
+      outline: unset;
+    }
+  }
+
+  .choice-wrapper {
+    .choice-item {
+      flex: 1;
+    }
+  }
+}

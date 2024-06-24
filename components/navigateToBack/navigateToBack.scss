@@ -1,0 +1,86 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.navigate-to-back {
+  margin: 0 auto;
+  width: 100%;
+  z-index: 3;
+  direction: ltr;
+  height: 65px;
+
+  .navigator-content {
+    height: 64px;
+    height: 64px;
+    display: grid;
+    display: -ms-grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+
+    > * {
+      min-width: 48px;
+    }
+  }
+
+  .page-title {
+    text-align: center;
+    @include Fa_Page_Header();
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .gem-amount {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    .nav-to-back-diamond {
+      width: 24px !important;
+      height: 24px !important;
+      margin-right: 4px;
+      position: unset !important;
+    }
+
+    .navigate-to-back-skeleton {
+      width: 24px;
+      height: 24px;
+      transform: unset;
+    }
+  }
+
+  a,
+  button {
+    margin: auto;
+    padding: unset;
+    border-radius: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    min-width: unset;
+    // margin-left: auto;
+    .icon {
+      font-size: 26px;
+    }
+  }
+}
+
+.navigate-to-back-popover {
+  // z-index: 1100 !important;
+  z-index: 1250 !important;
+  .MuiPaper-root {
+    box-shadow: unset !important;
+    border: 1px solid;
+    .text-icon-wrapper {
+      display: flex;
+      padding: 8px;
+      width: 133px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    svg {
+      width: 30px;
+      margin-left: 8px;
+    }
+  }
+}

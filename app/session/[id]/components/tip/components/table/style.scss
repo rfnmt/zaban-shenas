@@ -1,0 +1,87 @@
+@import "@/assets/mixin.scss";
+@import "@/assets/typography.scss";
+
+.tip-table-wrapper {
+  padding: 0 16px;
+  border-radius: unset !important;
+  box-shadow: unset !important;
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate !important;
+    td,
+    th {
+      padding: 8px 20px !important;
+      text-align: center !important;
+
+      .wrap-sentence {
+        text-align: center !important;
+      }
+    }
+  }
+  table thead tr {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  table tbody tr:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  table tbody tr:last-of-type {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+  table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  .handle-Tr-First-child-Td-Last-child {
+    tr:first-child {
+      td:last-child {
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+
+  .handle-Tr-First-child-Td-First-child {
+    tr:first-child {
+      td:first-child {
+        border-top-left-radius: 10px;
+      }
+    }
+  }
+
+  table tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  table tr th {
+    border-bottom: unset !important;
+  }
+  table tr:not(:first-of-type) td {
+    // background-color: yellow;
+    border-top: unset !important;
+  }
+  table tr th:not(:first-of-type),
+  table tr td:not(:first-of-type) {
+    // background-color: olivedrab;
+    border-left: unset !important;
+  }
+  table tr th:first-child,
+  table tr td:first-child {
+  }
+  table tr:first-child th,
+  table tr:first-child td {
+  }
+}

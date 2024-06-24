@@ -1,0 +1,87 @@
+@import "/assets/typography.scss";
+.main-single-student-Layout-wrapper {
+  .single-suggested-friends-loading {
+    height: calc(100vh - 65px);
+    max-width: 768px;
+    margin: 0 auto;
+    top: unset !important;
+  }
+  .single-user-profile-info {
+    padding-top: 16px;
+    padding-bottom: 24px;
+    // height: calc(100vh - 65px);
+    .gift-follow {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      column-gap: 16px;
+
+      button {
+        &:first-of-type {
+          box-shadow: 0 1px 1px #00000029;
+          border-radius: 10px;
+          min-width: unset !important;
+          &:hover {
+            box-shadow: 0 1px 1px #00000029 !important;
+            background-color: unset !important;
+          }
+        }
+      }
+
+      .checkbox-wrapper-follow-unfollow {
+        height: 48px;
+        position: relative;
+
+        .preventing-click {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 100;
+          z-index: 30000;
+          cursor: default;
+        }
+        label {
+          height: 100%;
+          margin: unset !important;
+          span {
+            &:first-of-type {
+              display: none;
+            }
+            &:last-of-type {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .follow-specific-friends {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+
+        .follow-unfollow-caption {
+          margin-right: 8px;
+        }
+      }
+
+      .following-loading {
+        position: absolute !important;
+        box-sizing: border-box;
+      }
+    }
+
+    .learning-statistics {
+      margin-top: 24px;
+      > p {
+        direction: rtl;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

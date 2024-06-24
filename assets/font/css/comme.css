@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Comme;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/comme/Comme-Bold.ttf") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Comme;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/comme/Comme-Medium.ttf") format("woff");
+  font-display: swap;
+}

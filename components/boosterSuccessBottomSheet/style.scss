@@ -1,0 +1,47 @@
+@import "/assets/typography.scss";
+
+.booster-success-bottom-sheet {
+  max-width: 768px;
+  margin: 0 auto;
+  direction: rtl;
+  z-index: 10000 !important;
+  .react-modal-sheet-container {
+    border-top-right-radius: 11px !important;
+    border-top-left-radius: 11px !important;
+    box-shadow: unset !important;
+  }
+
+  .react-modal-sheet-content {
+    border-radius: inherit;
+    .booster-success-main-wrapper {
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .booster-success-pic {
+        width: 144px;
+        height: 144px;
+        margin-bottom: 16px;
+      }
+
+      .booster-success-title {
+        margin-bottom: 8px;
+        @include Fa_Subtitle_1();
+      }
+
+      .booster-success-subtitle {
+        margin-bottom: 24px;
+        @include Fa_Placeholder();
+        span {
+          @include Fa_Placeholder();
+        }
+      }
+    }
+  }
+
+  .react-modal-sheet-backdrop {
+    max-width: 768px;
+    margin: 0 auto;
+    left: unset !important;
+  }
+}

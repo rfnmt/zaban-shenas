@@ -1,0 +1,102 @@
+@import "/assets/mixin.scss";
+@import "/assets/typography.scss";
+
+.select-grade-wrapper {
+  direction: rtl;
+  flex-direction: column;
+  min-height: calc(100dvh - env(safe-area-inset-bottom));
+
+  .select-grade-loading,
+  .select-grade-retry-request {
+    height: calc(100dvh - 64px);
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .MuiBackdrop-root {
+      position: absolute;
+    }
+  }
+
+  .MuiToolbar-root {
+    padding: unset;
+  }
+
+  .course-list {
+    margin-top: 24px;
+
+    > .title {
+      margin-bottom: 16px;
+      @include Fa_Pageheader();
+    }
+
+    .items {
+      > div {
+        position: relative;
+      }
+
+      .cource-item {
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 118px 1fr 24px;
+        column-gap: 16px;
+        cursor: pointer;
+
+        .select-grade-img-holder {
+          display: flex;
+          border-radius: 5px;
+          overflow: hidden;
+          position: relative;
+          height: fit-content;
+
+          img {
+            object-fit: cover;
+          }
+
+          .new-cource {
+            position: absolute;
+            width: 30px;
+            height: 15px;
+            padding: 0px 4px;
+            top: 4px;
+            left: 4px;
+            font-size: 10px;
+            border-radius: 5px;
+          }
+
+          .number-of-sections {
+            position: absolute;
+            height: 17px;
+            font-size: 9px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        .text-holder {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title {
+            @include Fa_Subtitle_2();
+          }
+          .description {
+            @include Fa_Tag();
+          }
+        }
+
+        .icon-holder {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
